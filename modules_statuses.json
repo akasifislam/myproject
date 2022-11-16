@@ -1,0 +1,21 @@
+{
+    "Category": true,
+    "Blog": true,
+    "Setting": true,
+    "Testimonial": true,
+    "Comment": true,
+    "Student": true,
+    "Coupon": true,
+    "Review": true,
+    "Instructor": true,
+    "Course": true,
+    "Admin": true,
+    "Messenger": true,
+    "Order": true,
+    "Event": true,
+    "Subscription": true,
+    "Contact": true,
+    "Chat": true,
+    "Installer": true,
+    "Faq": true
+}
