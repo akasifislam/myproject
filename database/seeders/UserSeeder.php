@@ -37,9 +37,9 @@ class UserSeeder extends Seeder
         // students create
         $students = [
             [
-                'firstname' => 'Student',
+                'firstname' => 'Student1',
                 'lastname' => '1',
-                'slug' => 'student',
+                'slug' => 'student1',
                 'email' => 'student@mail.com',
                 'image' => 'backend/image/default.png',
                 'password' => bcrypt('password'),
@@ -50,7 +50,7 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
             ],
             [
-                'firstname' => 'Student',
+                'firstname' => 'Student2',
                 'lastname' => '2',
                 'slug' => 'student2',
                 'email' => 'student2@mail.com',
@@ -63,7 +63,7 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
             ],
             [
-                'firstname' => 'Student',
+                'firstname' => 'Student3',
                 'lastname' => '3',
                 'slug' => 'student3',
                 'email' => 'student3@mail.com',
@@ -76,7 +76,7 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
             ],
             [
-                'firstname' => 'Student',
+                'firstname' => 'Student4',
                 'lastname' => '4',
                 'slug' => 'student4',
                 'email' => 'student4@mail.com',
@@ -89,7 +89,7 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
             ],
             [
-                'firstname' => 'Student',
+                'firstname' => 'Student5',
                 'lastname' => '5',
                 'slug' => 'student5',
                 'email' => 'student5@mail.com',
