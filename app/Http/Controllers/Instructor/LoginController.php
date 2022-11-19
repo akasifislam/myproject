@@ -30,6 +30,7 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
+        // return "ok";
         return view('instructor.login');
     }
 
