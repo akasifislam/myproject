@@ -246,10 +246,10 @@
                                 </ul>
                             </li>
 
-                            <x-sidebar-list :linkActive="Route::is('themes') ? true : false" route="themes"
+                            {{-- <x-sidebar-list :linkActive="Route::is('themes') ? true : false" route="themes"
                                 icon="fas fa-exchange-alt">
                                 Themes
-                            </x-sidebar-list>
+                            </x-sidebar-list> --}}
                         @endauth
                         @auth('instructor')
                             <x-sidebar-list :linkActive="Route::is('instructor.dashboard') ? true : false"

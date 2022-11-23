@@ -27,10 +27,6 @@ use App\Http\Controllers\Instructor\ForgotPasswordController as InstructorForgot
 use App\Http\Controllers\Instructor\LoginController as InstructorLoginController;
 use App\Http\Controllers\Instructor\ResetPasswordController as InstructorResetPasswordController;
 use App\Http\Controllers\PaymentSettingController;
-use App\Http\Controllers\RazorpayPaymentController;
-use App\Http\Controllers\StripePaymentController;
-use Maatwebsite\Excel\Row;
-use Modules\Faq\Http\Controllers\Api\FaqController;
 
 Route::group(['middleware' => 'install_check'], function () {
 
