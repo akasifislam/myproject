@@ -1,11 +1,16 @@
 @extends('layouts.website')
 
-@section('title') Home - {{ env('APP_NAME') }} @endsection
+@section('title')
+    Home - {{ env('APP_NAME') }}
+@endsection
 
 @section('style')
-<link rel="stylesheet" href="{{ asset('backend') }}/plugins/fontawesome-free/css/all.min.css">@endsection
+    <link rel="stylesheet" href="{{ asset('backend') }}/plugins/fontawesome-free/css/all.min.css">
+@endsection
 
-@section('footer_class') footer-ex-p @endsection
+@section('footer_class')
+    footer-ex-p
+@endsection
 
 @section('content')
     <!-- Banner Starts Here -->
@@ -14,18 +19,18 @@
             <div class="row">
                 <div class="col-lg-7 mb-lg-0 order-2 order-lg-0">
                     <div class="banner-two-start">
-                        <h1 class="font-title--lg">Learn with Expert Anytime Anywhere.</h1>
-                        <p>Our mision is to help people to find the best course online and learn with expert anytime,
-                            anywhere.</p>
+                        <h1 class="font-title--lg">Never Stop Learning.</h1>
+                        {{-- <p>Our mision is to help people to find the best course online and learn with expert anytime,
+                            anywhere.</p> --}}
 
                         {{-- search --}}
                         <x-frontend.banner-search :categories="$allcategories" />
                     </div>
                 </div>
-                <div class="col-lg-5 order-1 order-lg-0">
+                {{-- <div class="col-lg-5 order-1 order-lg-0">
                     <div class="main-banner-end"><img src="{{ asset('frontend/dist/images/banner/banner-image-01.png') }}"
                             alt="image" class="img-fluid" /></div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
@@ -47,28 +52,32 @@
                                                 <i class="{{ $category->icon }}"></i>
                                             </div>
                                         @break
+
                                         @case(2)
                                             <div class="categories-two default-categories">
                                                 <i class="{{ $category->icon }}"></i>
                                             </div>
                                         @break
+
                                         @case(3)
                                             <div class="categories-three default-categories">
                                                 <i class="{{ $category->icon }}"></i>
                                             </div>
                                         @break
+
                                         @case(4)
                                             <div class="categories-four default-categories">
                                                 <i class="{{ $category->icon }}"></i>
                                             </div>
                                         @break
+
                                         @case(5)
                                             <div class="categories-five default-categories">
                                                 <i class="{{ $category->icon }}"></i>
                                             </div>
                                         @break
-                                        @default
 
+                                        @default
                                     @endswitch
                                 </div>
                                 <div class="browse-categories-item-text">
@@ -171,9 +180,9 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="cardFeature">
                         <div class="cardFeature__icon cardFeature__icon--bg-book">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="feather feather-book-open">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-book-open">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                             </svg>
@@ -186,9 +195,9 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="cardFeature">
                         <div class="cardFeature__icon cardFeature__icon--bg-user">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="feather feather-users">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-users">
                                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="9" cy="7" r="4"></circle>
                                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -203,9 +212,9 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="cardFeature">
                         <div class="cardFeature__icon cardFeature__icon--bg-clock">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="feather feather-clock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-clock">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
@@ -259,7 +268,8 @@
                         <img src="{{ asset('frontend') }}/dist/images/hero/hero-img-01.jpg" alt="img"
                             class="img-fluid" />
                         <div class="learning-rules-ends-circle"><img
-                                src="{{ asset('frontend') }}/dist/images/shape/l03.png" alt="shape" class="img-fluid" />
+                                src="{{ asset('frontend') }}/dist/images/shape/l03.png" alt="shape"
+                                class="img-fluid" />
                         </div>
                         <div class="earning-rules-ends-shape"><img
                                 src="{{ asset('frontend') }}/dist/images/shape/l04.png" alt="shape"
@@ -270,8 +280,9 @@
             </div>
         </div>
         <div class="learning-rules-shape"><img src="{{ asset('frontend') }}/dist/images/shape/dots/dots-img-16.png"
-                alt="shape" class="img-fluid shape-01" /> <img src="{{ asset('frontend') }}/dist/images/shape/l02.png"
-                alt="shape" class="img-fluid shape-02" /></div>
+                alt="shape" class="img-fluid shape-01" /> <img
+                src="{{ asset('frontend') }}/dist/images/shape/l02.png" alt="shape" class="img-fluid shape-02" />
+        </div>
     </section>
 
     <!--  About Services Starts Here -->
@@ -300,20 +311,25 @@
                                     @case(1)
                                         @include('components.Stars.full')
                                     @break
+
                                     @case(2)
                                         @for ($i = 0; $i < 2; $i++)
                                             @include('components.Stars.full')
                                         @endfor
                                     @break
-                                    @case(3) @for ($i = 0; $i < 3; $i++)
-                                        @include('components.Stars.full') @endfor
 
+                                    @case(3)
+                                        @for ($i = 0; $i < 3; $i++)
+                                            @include('components.Stars.full')
+                                        @endfor
                                     @break
+
                                     @case(4)
                                         @for ($i = 0; $i < 4; $i++)
                                             @include('components.Stars.full')
                                         @endfor
                                     @break
+
                                     @case(5)
                                         @for ($i = 0; $i < 5; $i++)
                                             @include('components.Stars.full')
@@ -327,10 +343,12 @@
             </div>
         </div>
         <div class="about-services-shape">
-            <img src="{{ asset('frontend') }}/dist/images/shape/line02.png" alt="shape" class="img-fluid img-shape-01" />
+            <img src="{{ asset('frontend') }}/dist/images/shape/line02.png" alt="shape"
+                class="img-fluid img-shape-01" />
             <img src="{{ asset('frontend') }}/dist/images/shape/dots/dots-img-13.png" alt="shape"
                 class="img-fluid img-shape-02" />
-            <img src="{{ asset('frontend') }}/dist/images/shape/l02.png" alt="shape" class="img-fluid img-shape-03" />
+            <img src="{{ asset('frontend') }}/dist/images/shape/l02.png" alt="shape"
+                class="img-fluid img-shape-03" />
         </div>
         <div class="container overflow-hidden">
             <div class="row mb-40">
@@ -466,8 +484,8 @@
                                     class="form-control border-lowBlack" placeholder="Your email" />
                                 <button class="button button-lg button--primary" type="submit">Subscribe</button>
                             </div>
-                            @error('email') <span
-                                    class="invalid-feedback text-start mb-3 d-block">{{ $message }}</span>
+                            @error('email')
+                                <span class="invalid-feedback text-start mb-3 d-block">{{ $message }}</span>
                             @enderror
                         </form>
                     </div>
@@ -478,15 +496,15 @@
 @endsection
 
 @section('script')
-<script>
-    function category_sorting_function(slug) {
-        $('#category_input_value').val(slug)
-        $('#category_sorting_form').submit()
-    }
+    <script>
+        function category_sorting_function(slug) {
+            $('#category_input_value').val(slug)
+            $('#category_sorting_form').submit()
+        }
 
-    function categoryWiseCourse(slug) {
-        $('.category_wise_input').val(slug)
-        $('.categoryWiseCourseForm').submit()
-    }
-</script>
+        function categoryWiseCourse(slug) {
+            $('.category_wise_input').val(slug)
+            $('.categoryWiseCourseForm').submit()
+        }
+    </script>
 @endsection
