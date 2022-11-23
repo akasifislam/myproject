@@ -245,11 +245,6 @@
                                     </li>
                                 </ul>
                             </li>
-
-                            {{-- <x-sidebar-list :linkActive="Route::is('themes') ? true : false" route="themes"
-                                icon="fas fa-exchange-alt">
-                                Themes
-                            </x-sidebar-list> --}}
                         @endauth
                         @auth('instructor')
                             <x-sidebar-list :linkActive="Route::is('instructor.dashboard') ? true : false"
@@ -285,12 +280,12 @@
                                 My Reviews
                             </x-sidebar-list>
                             <!-- Chat -->
-                            @if (Module::collections()->has('Chat'))
+                            {{-- @if (Module::collections()->has('Chat'))
                                 <x-sidebar-list :linkActive="Route::is('module.chat.index') ? true : false"
                                     route="module.chat.index" icon="fa fa-comment-dots">
                                     Chat
                                 </x-sidebar-list>
-                            @endif
+                            @endif --}}
 
                         @endauth
 
