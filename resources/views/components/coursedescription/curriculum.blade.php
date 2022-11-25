@@ -5,7 +5,8 @@
                 <button class="curriculum-area-top" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapse{{ $chapter->id }}" aria-expanded="false" aria-controls="collapse1">
                     <div class="curriculum-area-top-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="none">
                             <path d="M15.8332 7.08337L9.99984 12.9167L4.1665 7.08337" stroke="#42414B" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
@@ -62,10 +63,11 @@
                             </div>
                             <div class="curriculum-description-end">
                                 <p>12:34</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-lock">
-                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock">
+                                    <rect x="3" y="11" width="18" height="11" rx="2"
+                                        ry="2">
                                     </rect>
                                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                                 </svg>

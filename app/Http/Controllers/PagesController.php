@@ -35,24 +35,7 @@ class PagesController extends Controller
             ->withCount('course')->latest('course_count')->take(5)->get();
         $bestInstructor = Instructor::whereStatus(true)->latest('total_stars')->first();
 
-        switch (homePageThemes()) {
-            case '1':
-                // home page 1
-                return view('frontend.index', compact('allcategories', 'categories', 'popularCourses', 'instructors', 'topCategories', 'testimonials', 'events'));
-                break;
-            case '2':
-                // home page 2
-                return view('frontend.index2', compact('allcategories', 'categories', 'popularCourses', 'instructors', 'topCategories', 'testimonials', 'events'));
-                break;
-            case '3':
-                // home page 3
-                return view('frontend.index3', compact('popularCourses', 'testimonials', 'bestInstructor'));
-                break;
-
-            default:
-                return view('frontend.index', compact('allcategories', 'categories', 'popularCourses', 'instructors', 'topCategories', 'testimonials', 'events'));
-                break;
-        }
+        return view('frontend.index', compact('allcategories', 'categories', 'popularCourses', 'instructors', 'topCategories', 'testimonials', 'events'));
     }
 
     public function course(Request $request)

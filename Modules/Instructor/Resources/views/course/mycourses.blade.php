@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-@section('title') Course List | Instructor @endsection
+@section('title')
+    Course List | Instructor
+@endsection
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -10,24 +12,10 @@
                             <div class="col-4">
                                 <h3 class="card-title" style="line-height: 36px;">Course List</h3>
                             </div>
-                            <div class="col-4 text-center">
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="{{ route('instructor.pdf.download.mycourse') }}"
-                                        class="btn bg-primary float-right d-flex align-items-center justify-content-center"><i
-                                            class="fas fa-file-pdf"></i>&nbsp;PDF
-                                    </a>
-                                    <a href="{{ route('instructor.excel.download.mycourse') }}"
-                                        class="btn bg-success float-right d-flex align-items-center justify-content-center"><i
-                                            class="fas fa-file-pdf"></i>&nbsp;Excel
-                                    </a>
-                                    <a href="{{ route('instructor.csv.download.mycourse') }}"
-                                        class="btn bg-info float-right d-flex align-items-center justify-content-center"><i
-                                            class="fas fa-file-pdf"></i>&nbsp;Csv
-                                    </a>
-                                </div>
+                            <div class="col-4">
                             </div>
                             <div class="col-4">
-                                < <a href="{{ route('instructor.course.create') }}"
+                                <a href="{{ route('instructor.course.create') }}"
                                     class="btn bg-primary float-right d-flex align-items-center justify-content-center"><i
                                         class="fas fa-plus"></i>&nbsp;Add Course</a>
                             </div>
@@ -41,32 +29,32 @@
                                         aria-describedby="example1_info">
                                         <thead>
                                             <tr role="row" class="text-center">
-                                                <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1"
-                                                    colspan="1"
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
                                                     aria-label="Rendering engine: activate to sort column ascending"
                                                     aria-sort="descending" width="8%">Thumbnail</th>
-                                                <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1"
-                                                    colspan="1"
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
                                                     aria-label="Rendering engine: activate to sort column ascending"
                                                     aria-sort="descending" width="20%">Title</th>
-                                                <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1"
-                                                    colspan="1"
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
                                                     aria-label="Rendering engine: activate to sort column ascending"
                                                     aria-sort="descending" width="13%">Category</th>
-                                                <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1"
-                                                    colspan="1"
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
                                                     aria-label="Rendering engine: activate to sort column ascending"
                                                     aria-sort="descending" width="10%">Course Type</th>
-                                                <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1"
-                                                    colspan="1"
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
                                                     aria-label="Rendering engine: activate to sort column ascending"
                                                     aria-sort="descending" width="10%">Price</th>
-                                                <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1"
-                                                    colspan="1"
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
                                                     aria-label="Rendering engine: activate to sort column ascending"
                                                     aria-sort="descending" width="10%">Discount Price</th>
-                                                <th class="sorting_desc" tabindex="0" aria-controls="example1" rowspan="1"
-                                                    colspan="1"
+                                                <th class="sorting_desc" tabindex="0" aria-controls="example1"
+                                                    rowspan="1" colspan="1"
                                                     aria-label="Rendering engine: activate to sort column ascending"
                                                     aria-sort="descending" width="10%">Status</th>
                                                 <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1"
@@ -80,10 +68,10 @@
                                                     <td class="sorting_1 text-center" tabindex="0">
                                                         @if ($course->thumbnail && file_exists($course->thumbnail))
                                                             <img src="{{ asset($course->thumbnail) }}" height="50px"
-                                                            width="50px" alt="image">
+                                                                width="50px" alt="image">
                                                         @else
-                                                            <img src="{{ asset('backend/image/thumbnail.jpg') }}" height="50px"
-                                                            width="50px" alt="image">
+                                                            <img src="{{ asset('backend/image/thumbnail.jpg') }}"
+                                                                height="50px" width="50px" alt="image">
                                                         @endif
                                                     </td>
                                                     <td class="sorting_1 text-center" tabindex="0">{{ $course->title }}
@@ -91,8 +79,7 @@
                                                     <td class="sorting_1 text-center" tabindex="0">
                                                         {{ $course->category->name }}</td>
                                                     <td class="sorting_1 text-center" tabindex="0">
-                                                        <span
-                                                            class="badge badge-primary">{{ $course->course_type }}</span>
+                                                        <span class="badge badge-primary">{{ $course->course_type }}</span>
                                                     </td>
                                                     <td class="sorting_1 text-center" tabindex="0">
                                                         {{ $course->price ? $course->price : '-' }}</td>
@@ -175,7 +162,7 @@
             width: 35px;
             height: 19px;
             /* width: 60px;
-                                                                                                                                                                                height: 34px; */
+                                                                                                                                                                                                                    height: 34px; */
         }
 
         /* Hide default HTML checkbox */
@@ -226,7 +213,6 @@
         .slider.round:before {
             border-radius: 50%;
         }
-
     </style>
 @endsection
 

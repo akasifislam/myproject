@@ -1,8 +1,12 @@
 @extends('layouts.website')
 
-@section('title') Home - {{ env('APP_NAME') }} @endsection
+@section('title')
+    Home - {{ env('APP_NAME') }}
+@endsection
 
-@section('footer_class') footer-ex-p @endsection
+@section('footer_class')
+    footer-ex-p
+@endsection
 
 @section('content')
     <!-- Banner Starts Here -->
@@ -50,7 +54,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="cardFeature">
                         <div class="cardFeature__icon cardFeature__icon--bg-book">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M2 4H10.4C11.8852 4 13.3096 4.5619 14.3598 5.5621C15.41 6.56229 16 7.91885 16 9.33333V28C16 26.9391 15.5575 25.9217 14.7699 25.1716C13.9822 24.4214 12.9139 24 11.8 24H2V4Z"
                                     stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
@@ -70,7 +75,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="cardFeature">
                         <div class="cardFeature__icon cardFeature__icon--bg-user">
-                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M22.3854 14.2241C24.8741 14.2241 26.8914 12.2068 26.8914 9.71806C26.8914 7.23066 24.8741 5.21204 22.3854 5.21204"
                                     stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
@@ -98,9 +104,9 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="cardFeature">
                         <div class="cardFeature__icon cardFeature__icon--bg-clock">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="feather feather-clock">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-clock">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <polyline points="12 6 12 12 16 14"></polyline>
                             </svg>
@@ -127,7 +133,8 @@
                 @foreach ($categories as $category)
                     <div class="category">
                         <div class="category__img">
-                            <a href="#"><img src="{{ $category->thumbnail }}" alt="images" class="img-fluid" /></a>
+                            <a href="#"><img src="{{ $category->thumbnail }}" alt="images"
+                                    class="img-fluid" /></a>
                         </div>
                         <div class="category__tittle">
                             <h6><a href="#">{{ $category->name }}</a></h6>
@@ -160,8 +167,8 @@
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link active ps-0" id="pills-all-tab" data-bs-toggle="pill"
-                                        data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
-                                        aria-selected="true">All</button>
+                                        data-bs-target="#pills-all" type="button" role="tab"
+                                        aria-controls="pills-all" aria-selected="true">All</button>
                                 </li>
 
                                 @foreach ($topCategories as $category)
@@ -182,7 +189,8 @@
 
             <div class="row">
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel"
+                        aria-labelledby="pills-all-tab">
                         <div class="row">
                             @foreach ($popularCourses as $course)
                                 <div class="col-lg-4 col-md-6 mb-4">
@@ -253,8 +261,6 @@
                         <div class="testimonial testimonial--03 testimonial__slider--three">
 
                             @foreach ($testimonials as $testimonial)
-
-
                                 <div class="testimonial__item">
                                     <p class="font-para--lg">
                                         “{{ $testimonial->description }}“
@@ -264,13 +270,11 @@
                                         <div class="testimonial__user d-flex align-items-center">
                                             <div class="testimonial__user-img">
                                                 <img style="width: 64px; height: 64px"
-                                                    src="{{ asset($testimonial->image) }}"
-                                                    alt="Client" />
+                                                    src="{{ asset($testimonial->image) }}" alt="Client" />
                                             </div>
                                             <div class="testimonial__user-info">
                                                 <h6>{{ $testimonial->name }}</h6>
-                                                <span
-                                                    class="font-para--md">{{ $testimonial->position }}</span>
+                                                <span class="font-para--md">{{ $testimonial->position }}</span>
                                             </div>
                                         </div>
                                         <ul class="testimonial__item-star d-flex align-items-center">
@@ -278,20 +282,25 @@
                                                 @case(1)
                                                     @include('components.Stars.full')
                                                 @break
+
                                                 @case(2)
                                                     @for ($i = 0; $i < 2; $i++)
                                                         @include('components.Stars.full')
                                                     @endfor
                                                 @break
-                                                @case(3) @for ($i = 0; $i < 3; $i++)
-                                                    @include('components.Stars.full') @endfor
 
+                                                @case(3)
+                                                    @for ($i = 0; $i < 3; $i++)
+                                                        @include('components.Stars.full')
+                                                    @endfor
                                                 @break
+
                                                 @case(4)
                                                     @for ($i = 0; $i < 4; $i++)
                                                         @include('components.Stars.full')
                                                     @endfor
                                                 @break
+
                                                 @case(5)
                                                     @for ($i = 0; $i < 5; $i++)
                                                         @include('components.Stars.full')
@@ -301,7 +310,6 @@
                                         </ul>
                                     </div>
                                 </div>
-
                             @endforeach
                         </div>
                     </div>
@@ -325,22 +333,28 @@
                 <div class="col-lg-12">
                     <div class="brand-area">
                         <div class="brand-area-image">
-                            <img src="{{ asset('frontend') }}/dist/images/versity/1.png" alt="Brand" class="img-fluid" />
+                            <img src="{{ asset('frontend') }}/dist/images/versity/1.png" alt="Brand"
+                                class="img-fluid" />
                         </div>
                         <div class="brand-area-image">
-                            <img src="{{ asset('frontend') }}/dist/images/versity/2.png" alt="Brand" class="img-fluid" />
+                            <img src="{{ asset('frontend') }}/dist/images/versity/2.png" alt="Brand"
+                                class="img-fluid" />
                         </div>
                         <div class="brand-area-image">
-                            <img src="{{ asset('frontend') }}/dist/images/versity/3.png" alt="Brand" class="img-fluid" />
+                            <img src="{{ asset('frontend') }}/dist/images/versity/3.png" alt="Brand"
+                                class="img-fluid" />
                         </div>
                         <div class="brand-area-image">
-                            <img src="{{ asset('frontend') }}/dist/images/versity/4.png" alt="Brand" class="img-fluid" />
+                            <img src="{{ asset('frontend') }}/dist/images/versity/4.png" alt="Brand"
+                                class="img-fluid" />
                         </div>
                         <div class="brand-area-image">
-                            <img src="{{ asset('frontend') }}/dist/images/versity/2.png" alt="Brand" class="img-fluid" />
+                            <img src="{{ asset('frontend') }}/dist/images/versity/2.png" alt="Brand"
+                                class="img-fluid" />
                         </div>
                         <div class="brand-area-image">
-                            <img src="{{ asset('frontend') }}/dist/images/versity/5.png" alt="Brand" class="img-fluid" />
+                            <img src="{{ asset('frontend') }}/dist/images/versity/5.png" alt="Brand"
+                                class="img-fluid" />
                         </div>
                     </div>
                 </div>
@@ -398,7 +412,8 @@
                 </span>
             </div>
             <div class="join__overlay-img join__overlay-img--3">
-                <img src="{{ asset('frontend') }}/dist/images/join/shape06.svg" alt="Shape" class="shape-06 img-fluid" />
+                <img src="{{ asset('frontend') }}/dist/images/join/shape06.svg" alt="Shape"
+                    class="shape-06 img-fluid" />
             </div>
             <div class="join__overlay-img join__overlay-img--4">
                 <img src="{{ asset('frontend') }}/dist/images/join/shape05.svg" alt="Shape" class="img-fluid" />
@@ -530,7 +545,8 @@
                             <h6 class="font-title--sm">Use {{ env('APP_NAME') }} For Business</h6>
                             <p>Praesent ultricies nulla ac congue bibendum. Aliquam tempor euismod purus posuere gravida.
                                 Praesent augue sapien, vulputate eu imperdiet eget, tempor at enim.</p>
-                            <div class="text-center"><a href="javascript:void(0)" class="green-btn">Get {{ env('APP_NAME') }} For
+                            <div class="text-center"><a href="javascript:void(0)" class="green-btn">Get
+                                    {{ env('APP_NAME') }} For
                                     Business</a></div>
                         </div>
                     </div>
@@ -556,7 +572,8 @@
                                 <input name="email" type="email" value="{{ old('email') }}"
                                     class="form-control border-lowBlack {{ $errors->first('email', 'is-invalid') }}"
                                     placeholder="Your email" />
-                                @error('email') <span class="invalid-feedback text-start mb-3">{{ $message }}</span>
+                                @error('email')
+                                    <span class="invalid-feedback text-start mb-3">{{ $message }}</span>
                                 @enderror
                                 <button class="button button-lg button--primary" type="submit">Subscribe</button>
                             </div>
